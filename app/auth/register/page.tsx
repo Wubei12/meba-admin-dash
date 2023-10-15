@@ -64,7 +64,7 @@ function Page() {
             <div className="flex absolute items-center bg-white z-20 lg:right-0 rounded-xl w-full max-w-sm md:max-w-2xl shadow-2xl md:mx-8 flex-1 flex-col justify-center md:py-10 md:my-0 my-4 py-10">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                     <Image
-                        className="mx-auto h-24 w-auto"
+                        className="mx-auto h-20 w-auto"
                         src={logoImg}
                         alt="Meba"
                     />
