@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} h-screen`}>
+      <body className={`${roboto.className}`}>
         <CustomProvider>
           <Setup />
           {children}

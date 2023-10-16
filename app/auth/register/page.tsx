@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 function Page() {
     return (
-        <div className='flex relative items-center max-lg:justify-center overflow-x-hidden h-screen mx-auto'>
+        <div className='flex flex-wrap relative items-center max-lg:justify-center overflow-x-hidden h-screen mx-auto'>
             <div className='absolute w-full h-full'>
                 <div className='flex relative w-full h-full'>
                     <div className='absolute flex w-full h-full bg-black/50 z-10' />
@@ -24,10 +24,10 @@ function Page() {
                     <Image src={bgImg6} objectFit='contain' width={700} height={810} alt="bgImg6" />
                 </div>
             </div>
-            <div className="flex absolute items-center bg-white z-20 lg:right-0 rounded-xl w-full max-w-sm md:max-w-2xl shadow-2xl md:mx-8 flex-1 flex-col justify-center md:py-10 md:my-0 my-4 py-10">
+            <div className="flex absolute items-center bg-white z-20 lg:right-0 rounded-xl w-full max-w-sm md:max-w-2xl shadow-2xl md:mx-8 flex-1 flex-col justify-center md:py-10 md:my-0 my-4 pb-10 max-[380px]:pt-48">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                     <Image
-                        className="mx-auto h-20 w-auto"
+                        className="mx-auto max-md:pt-4 h-20 w-auto"
                         src={logoImg}
                         alt="logo"
                     />
