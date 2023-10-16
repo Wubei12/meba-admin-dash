@@ -24,7 +24,7 @@ function Page() {
                     <Image src={bgImg6} objectFit='contain' width={700} height={810} alt="bgImg6" />
                 </div>
             </div>
-            <div className="flex absolute items-center bg-white z-20 lg:right-0 rounded-xl w-full max-w-sm md:max-w-2xl shadow-2xl md:mx-8 flex-1 flex-col justify-center md:py-10 md:my-0 my-4 pb-10 max-[380px]:pt-48">
+            <div className="flex absolute items-center overscroll-y-contain bg-white z-20 lg:right-0 rounded-xl w-full max-w-sm md:max-w-2xl shadow-2xl md:mx-8 flex-1 flex-col justify-center md:py-10 md:my-0 my-4 pb-10 max-[380px]:pt-48">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                     <Image
                         className="mx-auto max-md:pt-4 h-20 w-auto"
