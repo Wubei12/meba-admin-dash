@@ -1,4 +1,10 @@
-import Image from 'next/image'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Meba | Home",
+  description: "Welcome to Meba!"
+}
+
 
 export default function Home() {
   return (

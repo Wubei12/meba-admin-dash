@@ -11,7 +11,6 @@ import { Mutex } from "async-mutex";
 const mutex = new Mutex();
 const baseQuery = fetchBaseQuery({
   baseUrl: "https://935f-197-156-107-26.ngrok-free.app/api/v1/account/auth",
-  credentials: "include",
 });
 const baseQueryWithReauth: BaseQueryFn<
   string | FetchArgs,
