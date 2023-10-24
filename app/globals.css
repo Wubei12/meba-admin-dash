@@ -7,3 +7,11 @@
   background-position: center center;
   background-size: cover;
 }
+
+.meba-box__flex-between {
+  @apply flex justify-between items-center;
+}
+
+.MuiDrawer-paper {
+  @apply dark:bg-[#21295c] dark:border-[#21295c] dark:text-[#ffedc2] max-[600px]:border-2 w-[250px];
+}
