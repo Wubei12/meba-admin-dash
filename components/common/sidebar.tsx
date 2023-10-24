@@ -86,7 +86,7 @@ function Sidebar({ isSidebarOpen, setIsSidebarOpen }: SideProps) {
                     anchor="left">
                     <Box width="100%">
 
-                        <Box className="max-sm:my-8 max-sm:m-0 " m="1.5rem 1.5rem 2rem 3rem">
+                        <Box className="max-[641px]:my-8 max-[641px]:m-0" m="1.5rem 1.5rem 2rem 3rem">
                             <div className="meba-box__flex-between w-full text-[#fdcd49] dark:text-[#ffe3a3] bg-opacity-80 max-sm:px-4">
                                 <Box display="flex" justifyContent="center" alignItems='center' gap="2rem" >
                                     <Image src={logoImg} alt='logo' width={30} height={30} />
