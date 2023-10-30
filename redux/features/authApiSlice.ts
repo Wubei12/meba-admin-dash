@@ -27,7 +27,7 @@ const authApiSlice = apiSlice.injectEndpoints({
     }),
     verify: builder.mutation({
       query: () => ({
-        url: "/registration/verify-email/",
+        url: "/token/verify/",
         method: "POST",
       }),
     }),

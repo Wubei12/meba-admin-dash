@@ -1,5 +1,6 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import authReducer from "./features/authSlice";
+// import userReducer from "./features/userSlice";
 import { useAppSelector } from "./hooks";
 import { apiSlice } from "./services/apiSlice";
 
@@ -8,6 +9,7 @@ export const makeStore = () =>
     reducer: {
       [apiSlice.reducerPath]: apiSlice.reducer,
       auth: authReducer,
+      // user: userReducer,
     },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware().concat(apiSlice.middleware),
