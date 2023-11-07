@@ -38,7 +38,7 @@ function NavLink({
         )
     }
     return (
-        <Link className='' href={href}>
+        <Link className='dark:hover:text-[#fff6e0]' href={href}>
             {children}
         </Link>
     )

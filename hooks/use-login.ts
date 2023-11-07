@@ -1,5 +1,5 @@
-import { useLoginMutation } from "@/redux/features/authApiSlice";
-import { setAuth } from "@/redux/features/authSlice";
+import { useLoginMutation } from "@/redux/features/auth/authApiSlice";
+import { setAuth } from "@/redux/features/auth/authSlice";
 import { useAppDispatch } from "@/redux/hooks";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, FormEvent, useState } from "react";

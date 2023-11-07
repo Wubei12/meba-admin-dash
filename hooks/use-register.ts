@@ -1,4 +1,4 @@
-import { useRegisterMutation } from "@/redux/features/authApiSlice";
+import { useRegisterMutation } from "@/redux/features/auth/authApiSlice";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { toast } from "react-toastify";
@@ -30,8 +30,8 @@ export default function useRegister() {
     register({ full_name, email, phone_number, password1, password2 })
       .unwrap()
       .then(() => {
-        toast.success("Please check email to verify account");
-        router.push("/auth/login");
+        toast.success("You've been Registered");
+        router.push("/dashboard");
       })
       .catch(() => {
         toast.error("Failed to register account");

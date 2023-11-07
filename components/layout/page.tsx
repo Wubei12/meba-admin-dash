@@ -2,8 +2,6 @@
 
 import React, { useState } from 'react'
 import { Navbar, Sidebar } from '../common';
-import { Box, useMediaQuery } from '@mui/material';
-
 
 
 type Props = {

@@ -1,5 +1,5 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-import authReducer from "./features/authSlice";
+import authReducer from "./features/auth/authSlice";
 // import userReducer from "./features/userSlice";
 import { useAppSelector } from "./hooks";
 import { apiSlice } from "./services/apiSlice";

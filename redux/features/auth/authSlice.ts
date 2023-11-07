@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { create } from "domain";
 
 interface AuthState {
   isAuthenticated: boolean;
   isLoading: boolean;
+  token: string;
 }
 
 const initialState = {

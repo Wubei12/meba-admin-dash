@@ -1,4 +1,4 @@
-import { apiSlice } from "../services/apiSlice";
+import { apiSlice } from "../../services/apiSlice";
 
 interface User {
   username: string;
@@ -13,54 +13,54 @@ const authApiSlice = apiSlice.injectEndpoints({
     }),
     login: builder.mutation({
       query: ({ username, email, password }) => ({
-        url: "/login/",
+        url: "/account/auth/login/",
         method: "POST",
         body: { username, email, password },
       }),
     }),
     register: builder.mutation({
       query: ({ full_name, email, phone_number, password1, password2 }) => ({
-        url: "/registration/",
+        url: "/account/auth/registration/",
         method: "POST",
         body: { full_name, email, phone_number, password1, password2 },
       }),
     }),
     verify: builder.mutation({
       query: () => ({
-        url: "/token/verify/",
+        url: "/account/auth/token/verify/",
         method: "POST",
       }),
     }),
     logout: builder.mutation({
       query: () => ({
-        url: "/logout/",
+        url: "/account/auth/logout/",
         method: "POST",
       }),
     }),
     activation: builder.mutation({
       query: ({ uid, token }) => ({
-        url: "/users/activation/",
+        url: "/account/auth/users/activation/",
         method: "POST",
         body: { uid, token },
       }),
     }),
     resetPassword: builder.mutation({
       query: (email) => ({
-        url: "/password/reset/",
+        url: "/account/auth/password/reset/",
         method: "POST",
         body: { email },
       }),
     }),
     resetPasswordConfirm: builder.mutation({
       query: ({ new_password1, new_password2, uid, token }) => ({
-        url: "/password/reset/confirm/",
+        url: "/account/auth/password/reset/confirm/",
         method: "POST",
         body: { new_password1, new_password2, uid, token },
       }),
     }),
     changePassword: builder.mutation({
       query: ({ old_password, new_password1, new_password2 }) => ({
-        url: "/password/change/",
+        url: "/account/auth/password/change/",
         method: "POST",
         body: { old_password, new_password1, new_password2 },
       }),
