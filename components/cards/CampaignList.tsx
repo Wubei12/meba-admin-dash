@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
-import { Campaign, useRetrieveCampaignsQuery } from '@/redux/features/campaigns/campaignSlice'
+import { useRetrieveCampaignsQuery } from '@/redux/features/campaigns/campaignSlice'
 import { Box, Button, Card, CardActions, CardContent, Collapse, Typography, useMediaQuery } from '@mui/material'
 import { Spinner } from '../common';
 
