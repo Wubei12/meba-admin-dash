@@ -1,6 +1,6 @@
 import { apiSlice } from "@/redux/services/apiSlice";
 
-interface Campaign {
+export interface Campaign {
   //   organizer: {
   //     name: string;
   //     email: string;
@@ -8,11 +8,14 @@ interface Campaign {
   //     location: string;
   //   };
   title: string;
-  short_description: string;
+  description: string;
   goalAmount: number;
   currentAmount: number;
   status: string;
   category: string;
+  startDate: string;
+  endDate: string;
+
   //   beneficiary: {
   //     name: string;
   //     description: string;
@@ -25,7 +28,7 @@ interface Campaign {
 
 const campaignSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
-    retrieveCampaigns: builder.query<Campaign, void>({
+    retrieveCampaigns: builder.query<Campaign[], void>({
       query: () => "/donation/campaigns",
     }),
   }),

@@ -1,12 +1,11 @@
 "use client"
 
 import React, { useState } from 'react'
-import { useRetrieveCampaignsQuery } from '@/redux/features/campaigns/campaignSlice'
+import { Campaign, useRetrieveCampaignsQuery } from '@/redux/features/campaigns/campaignSlice'
 import { Box, Button, Card, CardActions, CardContent, Collapse, Typography, useMediaQuery } from '@mui/material'
 import { Spinner } from '../common';
 
 interface CampaignProps {
-    _id: string;
     title: string;
     description: string;
     category: string;
@@ -19,7 +18,7 @@ interface CampaignProps {
 
 
 const Campaign = ({
-    _id, title, description, category, goalAmount, currentAmount, startDate, endDate, status
+    title, description, category, goalAmount, currentAmount, startDate, endDate, status
 }: CampaignProps) => {
     const [isExpanded, setIsExpanded] = useState(false)
 
@@ -84,7 +83,6 @@ function CampaignList() {
             }}>
                 {data?.map(
                     ({
-                        _id,
                         title,
                         description,
                         category,
@@ -95,8 +93,7 @@ function CampaignList() {
                         status
                     }: CampaignProps) => (
                         <Campaign
-                            key={_id}
-                            _id={_id}
+                            key={category}
                             title={title}
                             description={description}
                             category={category}
