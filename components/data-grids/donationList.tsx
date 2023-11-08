@@ -117,6 +117,7 @@ export default function DonationsList() {
                     rowCount={(data?.results && data?.count) || 0}
                     // rowsPerPageOptions={[20, 50, 100]}
                     pagination
+                    checkboxSelection
                 // onPageChange={fetchNextPage}
                 />
             </Box>
