@@ -18,11 +18,11 @@ function Layout({ children }: Props) {
                 setIsSidebarOpen={setIsSidebarOpen}
             />
             <div className={`${isSidebarOpen ? 'w-full max-sm:-z-10 max-sm:absolute' : "w-full"}`}>
-                <Navbar
-                    isSidebarOpen={isSidebarOpen}
-                    setIsSidebarOpen={setIsSidebarOpen}
-                />
                 <div className='sm:ml-12 ml-8 mr-2 sm:mr-5'>
+                    <Navbar
+                        isSidebarOpen={isSidebarOpen}
+                        setIsSidebarOpen={setIsSidebarOpen}
+                    />
                     {children}
                 </div>
             </div>
