@@ -10,12 +10,10 @@ export default function page() {
 
     return (
         <Layout>
-            <div className='sm:ml-12 ml-8 mr-2 sm:mr-5'>
-                <Box>
-                    <Header title='CAMPAIGNS' subtitle='view all your available campaigns here.' />
-                </Box>
-                <CampaignList />
-            </div>
+            <Box>
+                <Header title='CAMPAIGNS' subtitle='view all your available campaigns here.' />
+            </Box>
+            <CampaignList />
         </Layout>
     )
 }

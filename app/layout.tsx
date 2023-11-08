@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} bg-white text-gray-700 dark:bg-[#191F45] dark:text-gray-50 dark:text-opacity-90`}>
+      <body className={`${roboto.className} bg-[#ffffff] text-gray-700 dark:bg-[#191F45] dark:text-gray-50 dark:text-opacity-90`}>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           <CustomProvider>
             <ThemeSwitch />

@@ -12,7 +12,7 @@ function Layout({ children }: Props) {
 
     const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true)
     return (
-        <div className={"sm" ? "flex w-full h-screen" : "block w-full h-screen"}>
+        <div className={"sm" ? "flex w-full h-screen fixed" : "block w-full h-screen fixed"}>
             <Sidebar
                 isSidebarOpen={isSidebarOpen}
                 setIsSidebarOpen={setIsSidebarOpen}
@@ -22,7 +22,9 @@ function Layout({ children }: Props) {
                     isSidebarOpen={isSidebarOpen}
                     setIsSidebarOpen={setIsSidebarOpen}
                 />
-                {children}
+                <div className='sm:ml-12 ml-8 mr-2 sm:mr-5'>
+                    {children}
+                </div>
             </div>
         </div>
     )

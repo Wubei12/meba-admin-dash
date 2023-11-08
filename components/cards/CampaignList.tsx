@@ -26,12 +26,12 @@ const Campaign = ({
         <Card sx={{
             backgroundImage: "none",
             borderRadius: "0.55rem"
-        }} className=' dark:bg-[#21295c] bg-[#f0f0f0]  '>
+        }} className=' dark:bg-[#21295c] bg-[#21295c]  '>
             <CardContent>
-                <Typography className='dark:text-white text-gray-700 mb-2' variant="h5" component="div">
+                <Typography className='text-white mb-2 capitalize' variant="h5" component="div">
                     {title}
                 </Typography>
-                <Typography className=' mb-6 text-[14px] dark:text-[#997d3d] text-[#ffedc2]' gutterBottom>
+                <Typography className=' mb-6 text-[14px] dark:text-[#997d3d] text-[#ffda85]' gutterBottom>
                     {category}
                 </Typography>
                 <Typography className=' dark:text-[#ffda85] text-[#ffd166] ' >

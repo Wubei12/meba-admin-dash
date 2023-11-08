@@ -15,3 +15,27 @@
 .MuiDrawer-paper {
   @apply dark:bg-[#21295c] dark:border-[#21295c] dark:text-[#ffedc2] max-[600px]:border-2 w-[250px];
 }
+
+.donations__dataGrid .MuiDataGrid-root {
+  @apply border-none;
+}
+
+.donations__dataGrid .MuiDataGrid-cell {
+  @apply border-b-0;
+}
+
+.donations__dataGrid .MuiDataGrid-columnHeaders {
+  @apply dark:bg-[#21295c] bg-[#f0f0f0] dark:text-[#fff6e0] text-[#665429] border-b-0;
+}
+
+.donations__dataGrid .MuiDataGrid-virtualScroller {
+  @apply dark:bg-[#4d547d] bg-[#e0e0e0];
+}
+
+.donations__dataGrid .MuiDataGrid-footerContainer {
+  @apply dark:bg-[#21295c] bg-[#f0f0f0] dark:text-[#fff6e0] text-[#665429] border-t-0;
+}
+
+.donations__dataGrid .MuiDataGrid-toolbarContainer .MuiButton-text {
+  @apply dark:text-[#ffedc2] text-[#0d1025];
+}
