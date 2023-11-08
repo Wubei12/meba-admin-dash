@@ -5,18 +5,12 @@ import { Box } from '@mui/material'
 import React from 'react'
 
 export default function page() {
-
-
-
     return (
         <Layout>
-            <div>
-                <Box>
-                    <Header title='DONATIONS' subtitle='View your available donations here.' />
-                </Box>
-                <DonationsList />
-            </div>
-
+            <Box>
+                <Header title='DONATIONS' subtitle='View your available donations here.' />
+            </Box>
+            <DonationsList />
         </Layout>
     )
 }

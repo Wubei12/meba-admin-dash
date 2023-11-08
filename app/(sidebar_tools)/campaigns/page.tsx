@@ -5,9 +5,6 @@ import { Box, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
 
 export default function page() {
-
-
-
     return (
         <Layout>
             <Box>
