@@ -84,11 +84,11 @@ function Sidebar({ isSidebarOpen, setIsSidebarOpen }: SideProps) {
 
 
     return (
-        <div className={`${isSidebarOpen ? "w-[250px] transform duration-500" : "w-0  duration-500"}`}>
+        <div className={`${isSidebarOpen ? "w-[250px] transform duration-500" : "w-0 transform duration-500"}`}>
             {isSidebarOpen && (
                 <Drawer
                     open={isSidebarOpen}
-                    onClose={() => setIsSidebarOpen(false)}
+                    onClose={() => setIsSidebarOpen(!isSidebarOpen)}
                     variant="persistent"
                     anchor="left">
                     <Box width="100%">

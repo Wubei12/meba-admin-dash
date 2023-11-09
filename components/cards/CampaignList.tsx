@@ -68,7 +68,6 @@ const Campaign = ({
     )
 }
 
-
 function CampaignList() {
     const { data, isLoading } = useRetrieveCampaignsQuery();
     console.log("data: ", data)

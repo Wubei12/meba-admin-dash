@@ -17,14 +17,12 @@ function Layout({ children }: Props) {
                 isSidebarOpen={isSidebarOpen}
                 setIsSidebarOpen={setIsSidebarOpen}
             />
-            <div className={`${isSidebarOpen ? 'w-full max-sm:-z-10 max-sm:absolute' : "w-full"}`}>
-                <div className='sm:ml-12 ml-8 mr-2 sm:mr-5'>
-                    <Navbar
-                        isSidebarOpen={isSidebarOpen}
-                        setIsSidebarOpen={setIsSidebarOpen}
-                    />
-                    {children}
-                </div>
+            <div className={`${isSidebarOpen ? 'pl-14 flex-wrap max-sm:-z-10 max-sm:absolute' : "ml-8"} w-full flex flex-col`}>
+                <Navbar
+                    isSidebarOpen={isSidebarOpen}
+                    setIsSidebarOpen={setIsSidebarOpen}
+                />
+                {children}
             </div>
         </div>
     )

@@ -4,24 +4,14 @@ import React, { useCallback, useState } from 'react'
 import { v4 as uuidv4 } from "uuid";
 import { DonationProps, DonationPropsResponse, useRetrieveDonationsQuery } from '@/redux/features/donations/donationsSlice'
 import { Box, Typography } from '@mui/material';
-import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
 import { Spinner } from '../common';
-
 
 
 
 export default function DonationsList() {
 
     const { data, isLoading, refetch, isError } = useRetrieveDonationsQuery();
-    const [pageSize, setPageSize] = useState(20);
-    const [sort, setSort] = useState({});
-
-    const fetchNextPage = useCallback(() => {
-        if (data?.next) {
-            refetch();
-        }
-    }, [data, refetch]);
-
     const processDataFromDjango = (dataFromDjango: DonationPropsResponse | any) => {
         if (!dataFromDjango || !Array.isArray(dataFromDjango)) {
             return [];
@@ -34,10 +24,14 @@ export default function DonationsList() {
     };
 
     const rows = processDataFromDjango(data)
-    console.log(rows)
 
     if (isLoading) {
-        return <Typography className='flex text-lg gap-4 items-center mt-2'>Loading <Spinner sm /></Typography>;
+        return (
+            <div className='flex text-lg gap-4 items-center mt-2'>
+                <Typography>Loading</Typography>
+                <Spinner sm />
+            </div>
+        )
     }
 
     if (isError) {
@@ -106,21 +100,26 @@ export default function DonationsList() {
     ];
 
     return (
-        <div className='w-full sm:mt-5'>
-            <Box
-                height="68vh" className="donations__dataGrid">
-                <DataGrid
-                    loading={isLoading || !data}
-                    // getRowId={data?.count}
-                    rows={rows || []}
-                    columns={columns}
-                    rowCount={(data?.results && data?.count) || 0}
-                    // rowsPerPageOptions={[20, 50, 100]}
-                    pagination
-                    checkboxSelection
-                // onPageChange={fetchNextPage}
-                />
-            </Box>
-        </div>
+        <Box
+            width="100%"
+            alignContent="center"
+            height="68vh"
+            marginTop="20px"
+            className="donations__dataGrid" >
+            <DataGrid
+                loading={isLoading || !data}
+                rows={rows || []}
+                columns={columns}
+                rowCount={(data?.results && data?.count) || 0}
+                pagination
+                checkboxSelection
+                slots={{ toolbar: GridToolbar }}
+                slotProps={{
+                    toolbar: {
+                        showQuickFilter: true,
+                    }
+                }}
+            />
+        </Box >
     )
 }
