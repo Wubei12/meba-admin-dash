@@ -17,7 +17,7 @@ function Layout({ children }: Props) {
                 isSidebarOpen={isSidebarOpen}
                 setIsSidebarOpen={setIsSidebarOpen}
             />
-            <div className={`${isSidebarOpen ? 'pl-14 flex-wrap max-sm:-z-10 max-sm:absolute' : "ml-8"} w-full flex flex-col`}>
+            <div className={`${isSidebarOpen ? 'pl-14 flex-wrap max-sm:-z-10 max-sm:absolute' : "ml-8"} w-full`}>
                 <Navbar
                     isSidebarOpen={isSidebarOpen}
                     setIsSidebarOpen={setIsSidebarOpen}

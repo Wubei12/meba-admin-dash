@@ -1,6 +1,6 @@
 import React from 'react'
 import { Menu as MenuIcon, Search, SettingsOutlined } from "@mui/icons-material";
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 
 type NavProps = {
@@ -9,6 +9,7 @@ type NavProps = {
 }
 
 function Navbar({ isSidebarOpen, setIsSidebarOpen }: NavProps) {
+    const pathname = usePathname()
     const router = useRouter()
 
 
@@ -18,8 +19,12 @@ function Navbar({ isSidebarOpen, setIsSidebarOpen }: NavProps) {
                 <div className='flex sm:ml-1 ml-10 items-center justify-center'>
                     <button className=' hover:bg-neutral-300/90 active:scale-110  dark:hover:bg-neutral-500/80 text-center p-[0.5rem] transition border-gray hover:outline-none rounded-full'
                         onClick={() => {
-                            setIsSidebarOpen(!isSidebarOpen)
-                            router.refresh()
+                            if (pathname === "/donations") {
+                                setIsSidebarOpen(!isSidebarOpen)
+                                router.refresh()
+                            } else {
+                                setIsSidebarOpen(!isSidebarOpen)
+                            }
                         }
                         }
                     >
